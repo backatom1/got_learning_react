@@ -12,6 +12,8 @@
 }
 
 .error-txt {
-	width: 100%;
+	width: 200px;
+	margin: 0 auto;
+	background-color: white;
 	text-align: center;
 }

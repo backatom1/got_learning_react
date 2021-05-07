@@ -54,19 +54,15 @@ export default class CharDetails extends Component {
 
         if (!this.state.char && this.state.error) {
             return <ErrorMessage />
-        } else if (!this.state.char) {
-            return <span className='select-error'>Please select a character</span>
-        }
-
-        const { name, gender, born, died, culture } = this.state.char;
-
-        if (this.state.loading) {
+        } else if (!this.state.char && this.state.loading) {
             return (
                 <div className="char-details rounded">
                     <Spinner />
                 </div>
             )
         }
+
+        const { name, gender, born, died, culture } = this.state.char;
 
         return (
             <div className="char-details rounded">
